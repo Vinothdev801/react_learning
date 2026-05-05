@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    background-color: rgb(56, 52, 52);
+    color: white;
+}
+
+.bank-container{
+    width: 100%;
+    max-width: 2000px;
+    margin: 20px auto 20px;
+}
+
+.bankList{
+    display: flex;
+    justify-content: space-around;
+}
+
+.bankList li{
+    list-style-type: none;
+}
+
+.bank-container #header{
+    text-align: center;
+    font-size: 22px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 15px auto;
+}
+
+.card{
+    margin: 20px 50px;
+    padding: 20px 30px;
+    width: 300px;
+    height: 150px;
+    border: 0px solid;
+    border-radius: 5px;
+    /* box-shadow: 1px 1px 2px 1px rgb(243, 248, 255); */
+}
+
+.card, .card p, .card h3{
+    color: black;
+    background: whitesmoke;
+}

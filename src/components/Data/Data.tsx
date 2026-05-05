@@ -1,0 +1,34 @@
+const Accounts: any[] = [
+    {
+        id: 1,
+        accountNo: 8794236843,
+        balance: "10,000",
+        name: "HDFC Bank"
+    },
+    {
+        id: 2,
+        accountNo: 8794236843,
+        balance: "14,000",
+        name: "IDFC Bank"
+    },
+    {
+        id: 3,
+        accountNo: 8794236843,
+        balance: "20,000",
+        name: "Canara Bank"
+    },
+    {
+        id: 4,
+        accountNo: 8794236843,
+        balance: "40,200",
+        name: "Kotak Mahendira Bank"
+    },
+    {
+        id: 5,
+        accountNo: 8794236843,
+        balance: "16,000",
+        name: "Union Bank"
+    }
+];
+
+export default Accounts;
