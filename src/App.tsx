@@ -1,19 +1,27 @@
 //import { useState } from 'react'
 import './App.css'
-import { Footer } from './components/Footer'
-import { Header } from './components/Header'
+
 import { BankAccounts } from './components/list/Banks'
-import { UserProfile } from './components/profile/profile'
+import img from './assets/OIP.jpg'
+import { Navbar } from './components/navbar/Navabar'
+import { Footer } from './components/Footer'
 
 function App() {
-  //const [count, setCount] = useState(0)
+  const imgobj = {
+    name: "Logo",
+    path: img,
+    width: "25px",
+    height: "25px"
+  }
 
   return (
     <>
     {/* <Header />
     <UserProfile />
     <Footer /> */}
-    <BankAccounts />
+    <Navbar img={imgobj} />
+    <BankAccounts img={imgobj} />
+    <Footer />
     </>
   )
 }
