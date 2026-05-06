@@ -20,7 +20,9 @@ function App() {
     <UserProfile />
     <Footer /> */}
     <Navbar img={imgobj} />
-    <BankAccounts img={imgobj} />
+    <BankAccounts img={imgobj}>
+      <img src={imgobj.path} alt={imgobj.name} />
+    </BankAccounts>
     <Footer />
     </>
   )
