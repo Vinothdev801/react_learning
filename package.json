@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "local": "vite --host",
+    "localDb": "json-server --watch db.json",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"

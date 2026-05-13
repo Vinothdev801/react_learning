@@ -5,6 +5,7 @@ import { BankAccounts } from './components/list/Banks'
 import img from './assets/OIP.jpg'
 import { Navbar } from './components/navbar/Navabar'
 import { Footer } from './components/Footer'
+import { Pointer } from './components/game/pointer'
 
 function App() {
   const imgobj = {
@@ -23,6 +24,7 @@ function App() {
     <BankAccounts img={imgobj}>
       <img src={imgobj.path} alt={imgobj.name} />
     </BankAccounts>
+    <Pointer />
     <Footer />
     </>
   )

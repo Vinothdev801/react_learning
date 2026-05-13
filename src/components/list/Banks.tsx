@@ -8,13 +8,14 @@ export const BankAccounts = ({img, children}: any) => {
 
     const [index, setIndex] = useState(0);
     const [showAll, setShowAll] = useState(false);
-    const [account, setAccount] = useState();
+    const [account, setAccount] = useState("");
     const [right, setRight] = useState(true);
+    const [error, setError] = useState();
     
     useEffect(() =>{
         getApi("banks")
         .then(data => setAccount(data))
-        .catch(err => console.log('error: ', err))
+        .catch(err => setError(err))
     }, [])
 
     let acc = Accounts[index];
@@ -57,15 +58,27 @@ export const BankAccounts = ({img, children}: any) => {
             </div>
 
             <hr />
-
-            <div>
-                <h3>Data received from the API</h3>
+            {
+                account ? 
                 <div>
-                    <pre>
-                        {JSON.stringify(account, null, 2)}
-                    </pre>
+                    <h3>Data received from the API</h3>
+                    <div>
+                        <pre>
+                            {JSON.stringify(account, null, 2)}
+                        </pre>
+                    </div>
                 </div>
-            </div>
+                :
+                <div>
+                    <h3><b>Error response from Api:</b></h3>
+                    <div>
+                        <pre>
+                            {error}
+                        </pre>
+                    </div>
+                </div>
+            }
+            
         </div>
     );
 
