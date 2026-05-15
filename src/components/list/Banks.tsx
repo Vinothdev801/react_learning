@@ -28,16 +28,19 @@ export const BankAccounts = ({img, children}: any) => {
     
     
     useEffect(() =>{
-        getApi("banks")
-        .then(data => setAccount(data))
-        .catch(err => setError(err))
+        sample()
+        // getApi("banks")
+        // .then(data => setAccount(data))
+        // .catch(err => setError(err))
     }, [])
 
-    function sample() {
+    async function sample() {
         try{
-            let data = getApi("banks");
-            
-        } catch(err) {
+            let data = await getApi("banks");
+            console.log(data);
+            setAccount(data);
+        } catch(err: any) {
+            setError(err)
             console.log(err)
         }
     }
